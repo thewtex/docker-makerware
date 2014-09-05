@@ -13,4 +13,6 @@ RUN apt-get update
 
 RUN apt-get install -y makerware
 
+RUN touch /.makerware-license-accepted 
+
 CMD makerware
