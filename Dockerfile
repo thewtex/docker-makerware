@@ -15,5 +15,7 @@ RUN apt-get install -y makerware
 
 RUN touch /.makerware-license-accepted 
 
+ADD MakerWare.ini /.config/MakerBot/MakerWare.ini
+
 CMD conveyor-svc --config /etc/conveyor.conf & makerware
 
