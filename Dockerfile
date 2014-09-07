@@ -15,4 +15,5 @@ RUN apt-get install -y makerware
 
 RUN touch /.makerware-license-accepted 
 
-CMD makerware
+CMD conveyor-svc --config /etc/conveyor.conf & makerware
+
