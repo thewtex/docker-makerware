@@ -17,7 +17,7 @@ sudo docker build -t my_makerware
 To run makerware accessing local display (Nvidia driver required):
 
 ```
-./run.sh -v ~:/home:ro -i -t my_makerware /usr/bin/makerware
+./run.sh -v ~:/home:ro my_makerware
 ```
 
 This last command will:
