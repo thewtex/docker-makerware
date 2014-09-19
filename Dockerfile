@@ -13,9 +13,12 @@ RUN apt-get update
 
 RUN apt-get install -y makerware
 
-RUN touch /.makerware-license-accepted 
+RUN touch /.makerware-license-accepted
 
 ADD MakerWare.ini /.config/MakerBot/MakerWare.ini
 
-CMD conveyor-svc --config /etc/conveyor.conf & makerware
+RUN apt-get install -y supervisor
+RUN mkdir -p /var/log/supervisor
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
+CMD ["/usr/bin/supervisord"]
