@@ -25,11 +25,6 @@ This last command will:
 2. mount the host home `~` directory into `/home` directory within the container
 3. start `makerware`
 
-Known issues
-------------
-
-The menu entry `Devices -> Connect to a new devices` is not available.
-
 Licensing
 ---------
 
