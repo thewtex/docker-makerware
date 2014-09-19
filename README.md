@@ -21,6 +21,7 @@ To run makerware accessing local display (Nvidia driver required):
 ```
 
 This last command will:
+
 1. setup the local display sharing
 2. mount the host home `~` directory into `/home` directory within the container
 3. start `makerware`
