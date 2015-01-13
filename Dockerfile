@@ -1,4 +1,4 @@
-FROM thewtex/opengl-nvidia-ubuntu:340.24
+FROM thewtex/opengl-nvidia-ubuntu:343.36
 MAINTAINER Matt McCormick <matt@mmmccormick.com>
 
 RUN apt-get update
