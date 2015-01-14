@@ -10,14 +10,14 @@ Additionally, on system that uses the Nvidia proprietary driver, the [run.sh](ht
 To build the container:
 
 ```
-sudo docker build -t my_makerware 
+sudo docker build -t my_makerware .
 ```
 
 
 To run makerware accessing local display (Nvidia driver required):
 
 ```
-./run.sh -v ~:/home:ro my_makerware
+../docker-opengl-nvidia/run.sh -v $HOME:/home:rw my_makerware
 ```
 
 This last command will:
