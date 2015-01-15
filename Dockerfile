@@ -11,11 +11,11 @@ RUN wget http://downloads.makerbot.com/makerware/ubuntu/dev@makerbot.com.gpg.key
 RUN apt-key add /tmp/makerbot.gpg.key
 RUN apt-get update
 
+ADD MakerWare.ini /.config/MakerBot/MakerWare.ini
+
 RUN apt-get install -y makerware
 
 RUN touch /.makerware-license-accepted
-
-ADD MakerWare.ini /.config/MakerBot/MakerWare.ini
 
 RUN apt-get install -y supervisor
 RUN mkdir -p /var/log/supervisor
