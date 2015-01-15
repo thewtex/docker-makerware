@@ -21,4 +21,11 @@ RUN apt-get install -y supervisor
 RUN mkdir -p /var/log/supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
+COPY makerware.conf /etc/ld.so.conf.d/
+RUN ldconfig
+
+RUN mkdir -p /var/run/conveyor
+RUN chown conveyor:conveyor /var/run/conveyor
+RUN chmod 755 /var/run/conveyor
+
 CMD ["/usr/bin/supervisord"]
